@@ -1,10 +1,18 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
+BASE_DIR = os.path.dirname(__file__)
+
+model_path = os.path.join(BASE_DIR, 'model.pkl')
+features_path = os.path.join(BASE_DIR, 'features.pkl')
+
+model = pickle.load(open(model_path, 'rb'))
+features = pickle.load(open(features_path, 'rb'))
 # Load model & fitur
-model = pickle.load(open('model.pkl', 'rb'))
-features = pickle.load(open('features.pkl', 'rb'))
+# model = pickle.load(open('model.pkl', 'rb'))
+# features = pickle.load(open('features.pkl', 'rb'))
 
 
 st.title("🎓 Prediksi Dropout Siswa")
