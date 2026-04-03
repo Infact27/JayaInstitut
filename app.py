@@ -3,8 +3,8 @@ import pandas as pd
 import pickle
 
 # Load model & fitur
-model = pickle.load(open('JayaInstitut/model.pkl', 'rb'))
-features = pickle.load(open('JayaInstitut/features.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
+features = pickle.load(open('features.pkl', 'rb'))
 
 
 st.title("🎓 Prediksi Dropout Siswa")
